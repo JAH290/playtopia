@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLAYTOPIA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+</head>
+<body>
+    <div class="container"> 
+      <header>
+         <img src="images/logo_transparent.png" alt="Logo for PLAYTOPIA">
+         
+      </header>
+     
+        
+     
+    </div>
+    <img src="images/menu.png" alt="menu" class="menu-icon" onclick="openmenu()">
+         <div class="menu-box" id="menu">
+            <div class="right-links">
+                
+                <img src="images/close.png" alt="close menu" onclick="closemenu()">
+            </div>
+            <div class="menu-links">
+                <a href="#">Products</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            </div>
+            
+         </div>
+<div class="container1">
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><img src="images/My project.png"></div>
+          <div class="swiper-slide"><img src="images/My project (2).png"></div>
+          <div class="swiper-slide"><img src="images/My project (1).png"></div>
+          <div class="swiper-slide"><img src="images/My project (3).png"></div>
+          ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      
+        
+      </div>
+</div>
+   <script>
+    var menu=document.getElementById("menu");
+    function closemenu(){
+        menu.style.top="-100vh";
+    }
+    function openmenu(){
+        menu.style.top="17%";
+    }
+   </script> 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+        autoplay:{
+            delay:3000,
+            disableOnInteractions:false,
+        },
+  loop: true,
+
+  
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  
+});
+  </script>
+</body>
+</html>
